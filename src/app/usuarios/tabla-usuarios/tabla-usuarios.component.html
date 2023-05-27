@@ -1,0 +1,26 @@
+<br>
+<h1 style="width: 90%; text-align: center; margin-left: 5%;">Listado de usuarios</h1>
+
+<br>
+<div style="width: 80%; margin-right: 10%; margin-left: 10%;">
+    <table style="width: 100%;" class="table">
+        <thead class="table-dark">
+            <tr style="text-align: center;">
+                <th>Nombre de usuario</th>
+                <th>Fecha de nacimiento</th>
+                <th>Edad</th>
+                <th>Dirección</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios, let i = index">
+                <td>{{usuario.name}}</td>
+                <td style="text-align: center;">{{usuario.fecha_nacimiento| date:'dd/MM/YYYY'}}</td>
+                <td style="text-align: center;">{{usuario.edad}}</td>
+                <td>{{usuario.domicilio + ' #' + usuario.numero_exterior + ' Col. ' + usuario.colonia + ', ' + 
+                    usuario.ciudad + ', CP. ' + usuario.cp}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
